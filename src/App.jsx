@@ -1,24 +1,24 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header'
-import Home from './components/Home'
+import Header from './components/Header';
+import Home from './components/Home';
 import Movies from './components/Movies';
-import Music from './components/Music';
+import Anime from './components/Anime';
 import Games from './components/Games';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
 
 function App() {
   return (
     <Router>
-      <Header/>
+      <Header />
       <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/Movies' element={<Movies/>} />
-        <Route path='/Music' element={<Music/>} />
-        <Route path='/Games' element={<Games/>} />
+        <Route path='/' element={<Home />} />
+        <Route path='/movies' element={<Movies />} />
+        <Route path='/anime' element={<Anime />} />
+        <Route path='/games' element={<Games />} />
       </Routes>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
