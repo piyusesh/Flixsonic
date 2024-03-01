@@ -22,8 +22,8 @@ function Anime() {
   return (
     <>
       <div className='flex items-center justify-center gap-3 py-10'>
-          <input value={search} onChange={(e) => {setSearch(e.target.value)}} type="text" placeholder="Search..." className="px-4 py-2 text-sm rounded-lg border text-black border-gray-300"/>
-          <button onClick={handleSearch} className='bg-blue-500 text-sm text-white px-4 py-2 rounded-lg'>
+          <input value={search} onChange={(e) => {setSearch(e.target.value)}} type="text" placeholder="Search..." className="px-4 py-2 text-lg rounded-lg font-bold text-black border-gray-300"/>
+          <button onClick={handleSearch} className='bg-black bg-opacity-30 font-bold text-lg text-white px-4 py-2 rounded-lg'>
             Search
           </button>
         </div>

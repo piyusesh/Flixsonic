@@ -26,18 +26,20 @@ function AnimeDetails() {
   }
 
   return (
-    <>
-      <div className='flex'>
-        <div className='w-1/2 p-10'>
-          <img src={animeData.images.jpg.large_image_url} alt="Image" className='h-full' />
-        </div>
-        <div className='w-1/2 p-10'>
-          <h1 className='text-4xl my-4 text-blue-500'>{animeData.title}</h1>
-          <p>{animeData.synopsis}</p>
+    <div className="flex justify-center items-center h-scree">
+      <div className="max-w-4xl w-full mx-10 bg-white rounded-lg shadow-lg bg-opacity-20 overflow-hidden">
+        <div className="flex">
+          <div className="w-1/2 p-8">
+            <img src={animeData.images.jpg.large_image_url} alt="Anime" className="w-full" />
+          </div>
+          <div className="w-1/2 p-8">
+            <h1 className="text-4xl font-bold text-black mb-4">{animeData.title}</h1>
+            <p className="text-gray-700">{animeData.synopsis}</p>
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
-}  
+}
 
 export default AnimeDetails;

@@ -1,7 +1,15 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #121212;
-    color: #ffffff;
-    font-family: 'Dancing Script', cursive;
-  }
+  box-sizing: border-box;
+  color: #ffffff;
+  font-family: 'Dancing Script', cursive;
+  background-image: url(./assets/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
