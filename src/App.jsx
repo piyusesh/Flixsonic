@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import '@fontsource/dancing-script';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './components/Home';
@@ -17,7 +18,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/movies' element={<Movies />} />
         <Route path='/anime' element={<Anime />} />
-        <Route path="/anime/:mail_id" element={<AnimeDetails />} />
+        <Route path="/anime/:id" element={<AnimeDetails />} />
         <Route path='/games' element={<Games />} />
       </Routes>
     </Router>

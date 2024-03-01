@@ -2,20 +2,19 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 function AnimeDetails() {
-  const { mail_id } = useParams();
+  const { id } = useParams();
   const [animeData, setAnimeData] = useState(null);
 
   useEffect(() => {
-    fetch(`https://api.jikan.moe/v4/anime/${mail_id}`)
+    fetch(`https://api.jikan.moe/v4/anime/${id}`)
       .then(res => res.json())
       .then(resdata => {
-        setAnimeData(resdata)
         setAnimeData(resdata.data);
       })
       .catch(error => {
         console.error('Error fetching data:', error);
       });
-  }, [mail_id]);
+  }, [id]);
 
   useEffect(() => {
     console.log(animeData);

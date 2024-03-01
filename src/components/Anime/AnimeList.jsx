@@ -16,6 +16,7 @@ function AnimeList({ animelist }) {
               <h4 className="font-semibold text-sm md:text-base mb-1 truncate text-white">
                 {anime.title}
               </h4>
+              <p>{anime.release_date}</p>
             </div>
           </Link>
         ))
