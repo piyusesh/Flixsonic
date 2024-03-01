@@ -10,6 +10,7 @@ function AnimeDetails() {
       .then(res => res.json())
       .then(resdata => {
         setAnimeData(resdata.data);
+        console.log(resdata.data);
       })
       .catch(error => {
         console.error('Error fetching data:', error);

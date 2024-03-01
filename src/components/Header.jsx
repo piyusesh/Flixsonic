@@ -29,7 +29,7 @@ function Header() {
         </NavLink>
       </div>
       <div className="flex gap-5 items-center rounded-full text-2xl border-l border-r bg-black bg-opacity-20 font-bold text-white p-2">
-        <NavLink className="hover:text-black">Loing</NavLink>
+        <NavLink className="hover:text-black">Login</NavLink>
         <NavLink className="hover:text-black">Register</NavLink>
       </div>
     </nav>

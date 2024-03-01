@@ -16,7 +16,9 @@ function Anime() {
   }
 
   const handleSearch = () => {
-    getData();
+    if(search !== '') {
+      getData();
+    }
   }
 
   return (

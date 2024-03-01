@@ -17,22 +17,31 @@ function AnimeList({ animelist }) {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 md:px-8 lg:px-16 xl:px-20">
       {currentItems.map((anime, index) => (
         <Link
-          key={index}
-          to={`/anime/${anime.mal_id}`}
-          className="relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105 bg-opacity-20 bg-black text-white"
-        >
-          <img
-            src={anime.images.jpg.large_image_url}
-            alt="animeImage"
-            className="h-64 object-cover rounded-t-lg"
-          />
-          <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent rounded-b-lg">
-            <div>
+        key={index}
+        to={`/anime/${anime.mal_id}`}
+        className="relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105 bg-opacity-20 bg-black text-white"
+      >
+        <div className="flex">
+
+          <div className="w-1/2">
+            <img
+              src={anime.images.jpg.large_image_url}
+              alt="animeImage"
+              className="h-64 object-cover rounded-tl-lg rounded-bl-lg"
+            />
+          </div>
+      
+          <div className="w-1/2 bg-gradient-to-t from-black to-transparent p-4 rounded-tr-lg rounded-br-lg">
+            <div className="flex flex-col justify-end h-full">
               <h4 className="text-lg font-semibold mb-2 truncate">{anime.title}</h4>
-              <p className="text-sm text-gray-300">{anime.release_date}</p>
+              <p className="text-sm text-gray-300">Year: {anime.year}</p>
+              <p className="text-sm text-gray-300">Episodes : {anime.episodes}</p>
+              <p className="text-sm text-gray-300">Score : {anime.score}</p>
+              <p className="text-sm text-gray-300">Popularity : {anime.popularity}</p>
             </div>
           </div>
-        </Link>
+        </div>
+      </Link>      
       ))}
       {totalPages > 1 && (
         <div className="flex justify-center mt-4"> {/* Adjusted justify-center */}
