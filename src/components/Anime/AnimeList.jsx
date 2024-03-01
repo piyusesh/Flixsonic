@@ -1,14 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function AnimeList({ animelist }) {
   return (
     <div className="grid grid-cols-4 md:grid-cols-4 gap-10 px-20">
       {animelist ? (
         animelist.map((anime, index) => (
-          <div
-            key={index}
-            className="flex flex-col bg-blue-500 rounded overflow-hidden shadow-lg transition duration-300 transform hover:scale-105"
-          >
+          <Link key={index} to={`/anime/${anime.mal_id}`} className="flex flex-col bg-blue-500 rounded overflow-hidden shadow-lg transition duration-300 transform hover:scale-105">
             <img
               src={anime.images.jpg.large_image_url}
               alt="animeImage"
@@ -19,7 +17,7 @@ function AnimeList({ animelist }) {
                 {anime.title}
               </h4>
             </div>
-          </div>
+          </Link>
         ))
       ) : (
         <div className="not-found">Not Found</div>
@@ -28,4 +26,4 @@ function AnimeList({ animelist }) {
   );
 }
 
-export default AnimeList;
+export default AnimeList
